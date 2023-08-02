@@ -28,6 +28,10 @@ public class UpdateandDelete extends HttpServlet {
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
+		finaly{
+				//when ever you open the connection you need to close the connection for some security perpose
+				con.close();
+				}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -59,7 +63,10 @@ public class UpdateandDelete extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+				finaly{
+				//when ever you open the connection you need to close the connection for some security perpose
+				con.close();
+				}
 	}
 
 }
